@@ -1,0 +1,9 @@
+{
+  "total_timesteps": 50000,
+  "training_time_seconds": 1200,
+  "n_episodes": 2000,
+  "final_reward_mean": 28.41840718509655,
+  "final_reward_std": 5.568942972402276,
+  "max_reward": 44.30605063566842,
+  "min_reward": -72.75279819664084
+}

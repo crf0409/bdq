@@ -1,105 +1,68 @@
-# 编码与缓存
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.rar
+*.7z
+*.zst
+*.tar
+*.deb
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.gguf
+*.keras
+*.h5
+*.bin
+*.onnx
+*.tflite
+*.pb
+
+# Large numpy/matlab data
+*.npy
+*.npz
+*.mat
+*.pkl
+*.dill
+
+# Python
 __pycache__/
 *.py[cod]
-*.so
-*.a
-*.o
 *.egg-info/
-.pytest_cache/
-.mypy_cache/
+dist/
+build/
+*.so
+.eggs/
+
+# Virtual environments
+.env
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Jupyter
 .ipynb_checkpoints/
 
-# 虚拟环境
-venv/
-.env/
-.venv/
-
-# IDE / 系统
-.vscode/
-.idea/
-.DS_Store
-
-# 数据与实验产物
-outputs/
-output/
-results/
-runs/
-checkpoints/
-weights/
-models/
-model/
-logs/
-
-# 压缩包与归档文件（不上传）
-*.zip
-*.gz
-*.tar
-*.tar.gz
-*.tgz
-*.xz
-*.bz2
-*.7z
-*.rar
-
-# 模型文件（不上传）
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.onnx
-*.h5
-*.hdf5
-*.bin
-*.npy
-*.npz
-*.pb
-*.gguf
-*.tflite
-*.engine
-*.trt
-
-# 大型临时文件
-*.tmp
+# Logs / runs
 *.log
+wandb/
 
-# ===== 开源上传规则: 非代码文件 =====
-# 压缩包与归档文件（不上传）
-*.zip
-*.gz
-*.tar
-*.tar.gz
-*.tgz
-*.xz
-*.bz2
-*.7z
-*.rar
-
-# 模型文件（不上传）
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.onnx
-*.h5
-*.hdf5
-*.bin
-*.npy
-*.npz
-*.pb
-*.gguf
-*.tflite
-*.engine
-*.trt
-
-# 常见实验与大文件
-outputs/
-output/
-results/
-runs/
-checkpoints/
-weights/
-models/
-model/
-logs/
-*.tmp
-*.log
+# Baiduyun
+*.baiduyun*

@@ -1,35 +1,42 @@
-# bdq
+# bdq | 气象水文时序预测管道
 
-## 项目简介
+基于深度学习的气象/水文多节点时序数据预测系统，支持多站点联合训练与评估。
 
-这是一个独立项目，仓库按“只保留可执行代码与配置”进行开源。
+## 数据规格
 
-## 技术栈
+- 训练集：300 天历史数据
+- 测试集：20 天独立数据
+- 节点数：6 个监测站点
 
-- 主要语言：Python
+## 功能特性
 
-> 建议在此处补充具体框架与依赖版本（如 PyTorch、TensorFlow、React、ROS2 等）。
-
-## 目录结构
-
-- ：核心源码
-- ：说明文档
--  /  /  等：依赖说明（如适用）
-- 、、：请确认是否仅用于本地开发，不提交到 GitHub
+- 多站点时序数据清洗与对齐
+- 滑动窗口特征工程
+- 多模型对比（LSTM / GRU / Transformer）
+- 自动化结果汇报与可视化
 
 ## 快速开始
 
-1. 克隆仓库后按项目实际环境安装依赖
-2. 按文档中的入口脚本运行训练或推理
-3. 产物（日志、模型、数据）请保持在  中忽略的路径中
+```bash
+pip install -r requirements.txt
 
-## 贡献方式
+# 数据预处理
+python scripts/preprocess.py --config config/default.yaml
 
-- 欢迎提交 Issue 和 PR
-- 提交前请确保移除任何私有数据与模型文件
+# 训练
+python scripts/train.py --config config/default.yaml
 
-## 开源上传说明
+# 评估
+python scripts/evaluate.py --config config/default.yaml
+```
 
-- 已添加  以避免上传非代码文件
-- 建议仅提交源码、配置、脚本与文档
+## 目录结构
 
+```
+bdq/
+├── src/          # 核心模型与训练代码
+├── scripts/      # 数据处理与实验脚本
+├── config/       # 配置文件（YAML）
+├── results/      # 实验结果
+└── gj/           # 辅助工具
+```

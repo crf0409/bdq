@@ -1,0 +1,20 @@
+{
+  "best_test_day": 10,
+  "sac": {
+    "avg_voltage": 0.9820718751895238,
+    "avg_deviation": 0.021129651052456684,
+    "violation_rate": 0.0,
+    "avg_loss_kw": 5.942916666666666
+  },
+  "baseline": {
+    "avg_voltage": 0.9812854051363078,
+    "avg_deviation": 0.024710379704700115,
+    "violation_rate": 0.11868686868686869,
+    "avg_loss_kw": 6.991666666666667
+  },
+  "improvement": {
+    "loss_reduction": 15.000000000000014,
+    "deviation_reduction": 14.490787656987514,
+    "violation_reduction": 11.868686868686869
+  }
+}

@@ -1,0 +1,2 @@
+This is a demo model placeholder.
+For actual training, run: python scripts/train_sac.py
