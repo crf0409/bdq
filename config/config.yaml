@@ -1,0 +1,64 @@
+# IEEE33 微电网深度强化学习电压控制配置
+
+grid:
+  n_buses: 33
+  n_branches: 37
+  base_mva: 10.0   # 基准容量 MVA (论文中10MVA)
+  base_kv: 12.66   # 基准电压 kV
+  balance_node: 1   # 平衡节点（V/f控制）
+  balance_voltage: 1.0  # 平衡节点电压标幺值
+  load_scale: 1.0  # 微电网负荷缩放系数
+
+pv:
+  # 光伏接入节点（代码编号1-33）
+  buses: [10, 18, 22, 24, 28, 33]
+  capacity_mw: 0.6    # 每个光伏装机容量 MW
+  power_factor: 0.85  # 功率因数
+
+inverter:
+  s_rated: 0.69   # 额定视在功率 MVA (0.6MW × 1.15容配比)
+  capacity_ratio: 1.15  # 容配比
+
+voltage:
+  v_min: 0.95   # 电压下限
+  v_max: 1.05   # 电压上限
+  v_ref: 1.0    # 参考电压
+  deadband: 0.02  # 死区范围
+
+droop:
+  k_q: 2.0      # 无功-电压下垂系数
+  k_p: 0.02     # 有功-频率下垂系数
+
+diesel:
+  capacity_mw: 1.8  # 柴油发电机容量 MW
+  bus: 1
+  r_pu: 0.01
+  x_pu: 0.1
+
+storage:
+  capacity_mw: 1.8    # 储能功率 MW
+  energy_mwh: 7.2     # 储能能量 MWh
+  soc_min: 0.20       # SOC下限
+  soc_max: 0.90       # SOC上限
+  soc_init: 0.60      # 初始SOC
+  efficiency: 0.94    # 充放电效率
+  bus: 1
+
+sac:
+  learning_rate: 3e-4
+  buffer_size: 100000
+  batch_size: 256
+  gamma: 0.99
+  tau: 0.005
+  total_timesteps: 500000
+
+training:
+  train_days: 300
+  test_days: 20
+  episodes_per_day: 24  # 每天24小时
+
+paths:
+  train_data: "训练集300天_6节点.xlsx"
+  test_data: "测试集20天_6节点.xlsx"
+  irradiance_data: "wtxg/问题修改相关文件/文件三/全年小时级辐照数据.xlsx"
+  results: "results/"

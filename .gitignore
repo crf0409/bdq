@@ -1,0 +1,105 @@
+# 编码与缓存
+__pycache__/
+*.py[cod]
+*.so
+*.a
+*.o
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# 虚拟环境
+venv/
+.env/
+.venv/
+
+# IDE / 系统
+.vscode/
+.idea/
+.DS_Store
+
+# 数据与实验产物
+outputs/
+output/
+results/
+runs/
+checkpoints/
+weights/
+models/
+model/
+logs/
+
+# 压缩包与归档文件（不上传）
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.tgz
+*.xz
+*.bz2
+*.7z
+*.rar
+
+# 模型文件（不上传）
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.bin
+*.npy
+*.npz
+*.pb
+*.gguf
+*.tflite
+*.engine
+*.trt
+
+# 大型临时文件
+*.tmp
+*.log
+
+# ===== 开源上传规则: 非代码文件 =====
+# 压缩包与归档文件（不上传）
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.tgz
+*.xz
+*.bz2
+*.7z
+*.rar
+
+# 模型文件（不上传）
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.bin
+*.npy
+*.npz
+*.pb
+*.gguf
+*.tflite
+*.engine
+*.trt
+
+# 常见实验与大文件
+outputs/
+output/
+results/
+runs/
+checkpoints/
+weights/
+models/
+model/
+logs/
+*.tmp
+*.log
